@@ -1,0 +1,101 @@
+<html>
+  <head>
+    <title>Prototyping</title>
+   <link rel="stylesheet" type="text/css" href="../static/index.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <!-- <link rel="stylesheet" href="/static/bootstrap.min.css"> -->
+  </head>
+  <body>
+
+    <div class="l-grid" id="container">
+
+      <div class="left-column">
+        <!-- covid images -->
+        <div class="virus-container">
+      <div class="covid" id="one"> <img src="../static/imgs/covid19.png"></div>
+      <div class="covid" id="two"> <img src="../static/imgs/covid19.png"></div>
+      <div class="covid" id="three"> <img src="../static/imgs/covid19.png"></div>
+      <div class="covid" id="four"> <img src="../static/imgs/covid19.png"></div>
+      <div class="covid" id="five"> <img src="../static/imgs/tothemoon.jpg"></div>
+      <div class="covid" id="six"> <img src="../static/imgs/covid19.png"></div>
+      <div class="covid" id="seven"> <img src="../static/imgs/covid19.png"></div>
+      </div>
+      </div>
+      
+          <div class ="content">
+      <div class="pagetitle jumbotron">
+        <h1>Covid-or-not</h1>
+      </div>
+           <div class="forms">
+
+          <!-- Enter text to process -->
+        <form class="process", method="get" action="{{ url_for('views_created') }}">    
+          <label>Create views for model:</label><br />
+          <input type ="submit" name="action" value="Create!">
+        </form>
+          
+          </br>
+          <div class="view"><h4> {{ train_head }}</h4></div>
+          <div class="table table-striped"> {{ train_d_html | safe }} </div>
+          <div class="view"><h4> {{ test_head }} </h4></div>
+          <div class="table table-striped"> {{ test_d_html | safe}} </div>
+          <div class="view"><h4> {{ views }} </h4></div>
+          <div class="views_done"> {{ views_sizes }} </div>
+
+
+          </br>
+          </br>
+
+        <form class="process", method="get" action="{{ url_for('experiment_done') }}">    
+          <label>Run a classification experiment:</label><br />
+          <input type ="submit" name="action" value="Run!">
+        </form>
+            </br>
+            <!-- shows data head's and sizes after views are created -->
+          <div class="view"><h4> {{ inserted_model_head }}</h4></div>
+          <div class="table table-striped"> {{ inserted_model | safe }} </div>
+          
+          </br>
+          </br>
+        
+        <form class="process", method="post" action="{{ url_for('retrieve_results') }}">    
+          <label for="retrieve_results">Retrieve information on all experiments conducted so far:</label><br />
+          <input type ="submit" name="action" value="Retrieve!">
+        </form>
+                    </br>
+
+          <div class="view"><h4> {{ most_recent_head }}</h4></div>
+          <div class="table table-striped"> {{ most_recent | safe }} </div>
+          <div class="view"><h4> {{ quickest_head }}</h4></div>
+          <div class="table table-striped"> {{ quickest | safe }} </div>
+          <div class="view"><h4> {{ most_precise_head }}</h4></div>
+          <div class="table table-striped"> {{ most_precise | safe }} </div>
+        
+          </br>
+          </br>
+      
+        <form class="process", method="post" action="{{ url_for('submitted_form') }}">
+          <label for="input_text">Implement a 'covid-or-not' predictor:</label> <input id="text_input" type="text" name="input_text"><br />
+          <input type ="submit" name="action" value="Submit!">
+        </form>
+        <div class="table table-striped"> {{ predicition | safe }} </div>
+      
+      </div>
+    </div>
+<div class="right-column">
+  <div class="virus-container">
+    <!-- covid images -->
+      <div class="covid" id="one"> <img src="../static/imgs/covid19.png"></div>
+      <div class="covid" id="two"> <img src="../static/imgs/covid19.png"></div>
+      <div class="covid" id="three"> <img src="../static/imgs/tothemoon.jpg"></div>
+      <div class="covid" id="four"> <img src="../static/imgs/covid19.png"></div>
+      <div class="covid" id="five"> <img src="../static/imgs/covid19.png"></div>
+      <div class="covid" id="six"> <img src="../static/imgs/covid19.png"></div>
+      <div class="covid" id="seven"> <img src="../static/imgs/covid19.png"></div>
+    </div>
+  </div>
+    </div>
+  </body>
+</html>

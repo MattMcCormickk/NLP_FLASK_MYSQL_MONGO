@@ -1,0 +1,121 @@
+html {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+body{
+	width: 100%;
+	text-align: center;
+	justify-content: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+input{
+	border-radius: 1.5em;
+}
+
+
+#container {
+	display: grid;
+	grid-template-columns: 25% 50% 25%;
+}
+.content{
+	z-index: 5;
+	position: relative;
+	justify-content: center;
+	margin-left: 2em;
+	margin-right: 2em;
+}
+
+.virus-container{
+	max-width: 100%;
+	max-height: 100%;}
+
+.jumbotron{
+	width: 100%;
+	text-align: center;
+	background-color: #29abe0
+	z-index: 2;
+	position: relative;
+	top:0em;
+}
+
+.process {
+	text-align: center;	
+	justify-content: center;
+	z-index: 2;
+	padding: 2em;
+	background-color: #9cc8c6
+}
+
+
+#input_text{
+	border-radius: 0.5em;
+}
+
+.covid {
+  animation: blink 10s infinite;
+  width: 3.5em;
+  height: 3.5em;
+  position: relative;
+  margin-top: 2em;
+}
+
+img{
+	max-height: 100%;
+	max-width: 100%;
+}
+
+#one.covid{
+	left: 60px; 
+	animation-delay: 2s;
+}
+
+#two.covid {
+	left: 220px;
+	animation-delay: 5s;
+}
+
+#three.covid{
+	left: 30px;
+}
+
+#four.covid{
+	left: 10px;
+	animation-delay: 7s;
+}
+
+#five.covid{
+	left: 170px;
+	animation-delay: 1s;
+}
+#six.covid{
+	left: 100px;
+	animation-delay: 8s;
+}
+
+#seven.covid{
+	left: 45px;
+	animation-delay: 3s;
+}
+
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  51% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

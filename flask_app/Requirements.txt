@@ -1,0 +1,35 @@
+# list of all requried imports
+
+from flask import Flask, render_template, request, url_for, jsonify, make_response
+import pymysql 
+import pymongo
+from pymongo import MongoClient
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import classification_report
+from sklearn.linear_model import LogisticRegression
+from sklearn.svm import SVC
+from collections import Counter
+from datetime import datetime
+import pickle
+import json
+from bson import ObjectId
+from io import BytesIO
+import base64
+from sklearn.feature_extraction.text import HashingVectorizer
+import enchant
+import pandas as pd
+from pandas import DataFrame
+import numpy as np
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import classification_report
+from sklearn.feature_extraction.text import HashingVectorizer
+from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn import metrics
+import datetime
+import string
+import re
+from stop_words import get_stop_words
+from nltk.stem import WordNetLemmatizer, PorterStemmer, SnowballStemmer
+import matplotlib.pyplot as plt
+
